@@ -1,7 +1,7 @@
 package com.example.walmarttest.domain.usecase
 
 import com.example.walmarttest.data.model.CountryItem
-import com.example.walmarttest.domain.model.Country
+import com.example.walmarttest.domain.dto.Country
 import com.example.walmarttest.domain.repository.CountryRespository
 import com.example.walmarttest.domain.util.exception.ApiException
 import okhttp3.ResponseBody

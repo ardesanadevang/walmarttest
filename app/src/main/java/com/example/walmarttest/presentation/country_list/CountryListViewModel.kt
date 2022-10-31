@@ -1,13 +1,10 @@
 package com.example.walmarttest.presentation.country_list
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.walmarttest.domain.model.Country
+import com.example.walmarttest.domain.dto.Country
 import com.example.walmarttest.domain.usecase.CountryUsecase
-import com.example.walmarttest.domain.util.Util
-import com.google.gson.Gson
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import javax.inject.Inject

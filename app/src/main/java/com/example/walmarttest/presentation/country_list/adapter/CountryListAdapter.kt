@@ -2,11 +2,9 @@ package com.example.walmarttest.presentation.country_list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.walmarttest.R
 import com.example.walmarttest.databinding.AdapterCountryItemBinding
-import com.example.walmarttest.domain.model.Country
+import com.example.walmarttest.domain.dto.Country
 
 class CountryListAdapter():RecyclerView.Adapter<MyViewHolder>() {
 

@@ -1,7 +1,7 @@
 package com.example.walmarttest.data.model
 
 
-import com.example.walmarttest.domain.model.Country
+import com.example.walmarttest.domain.dto.Country
 import com.google.gson.annotations.SerializedName
 
 data class CountryItem(

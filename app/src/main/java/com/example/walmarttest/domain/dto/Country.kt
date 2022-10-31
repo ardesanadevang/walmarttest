@@ -1,4 +1,4 @@
-package com.example.walmarttest.domain.model
+package com.example.walmarttest.domain.dto
 
 data class Country(
     val name: String = "",
