@@ -1,5 +1,6 @@
 package com.example.walmarttest.di
 
+import android.app.Application
 import com.example.walmarttest.data.api.ApiService
 import com.example.walmarttest.data.repository.CountryRepositoryImpl
 import com.example.walmarttest.domain.repository.CountryRespository
@@ -40,9 +41,9 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideCountryUsecase(countryRespository: CountryRespository): CountryUsecase{
+    fun provideCountryUsecase(countryRespository: CountryRespository, application: Application): CountryUsecase{
         return CountryUsecase(
-            getCountries = GetCountries(countryRespository)
+            getCountries = GetCountries(countryRespository, application)
         )
     }
 }

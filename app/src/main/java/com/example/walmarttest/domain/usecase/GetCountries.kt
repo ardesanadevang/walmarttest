@@ -1,5 +1,7 @@
 package com.example.walmarttest.domain.usecase
 
+import android.app.Application
+import com.example.walmarttest.R
 import com.example.walmarttest.data.model.CountryItem
 import com.example.walmarttest.domain.dto.Country
 import com.example.walmarttest.domain.repository.CountryRespository
@@ -8,7 +10,8 @@ import okhttp3.ResponseBody
 import retrofit2.Response
 
 class GetCountries(
-    val countryRespository: CountryRespository
+    val countryRespository: CountryRespository,
+    val application: Application
 ) {
     @Throws(ApiException::class)
     suspend operator fun invoke(): List<Country> {
@@ -17,7 +20,7 @@ class GetCountries(
             return response.body()?.map { it.toCountryModel() } ?: emptyList()
         else {
             val body:ResponseBody? = response.errorBody()
-            throw ApiException(body?.string() ?: "Api failed with code ${response.code()}")
+            throw ApiException(body?.string() ?: application.getString(R.string.no_internet_message))
         }
     }
 }
